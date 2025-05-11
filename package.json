@@ -1,0 +1,32 @@
+{
+  "name": "couch.routecrm.api",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "replace-env": "ts-node environments/replace-env.ts",
+    "copy-prisma": "copyfiles -u 1 prisma/**/* dist/prisma && copyfiles ./.env dist",
+    "build": "tsc && npm run copy-prisma",
+    "build:dev": "npm run build && cross-env NODE_ENV=development npm run replace-env",
+    "build:prod": "npm run build && cross-env NODE_ENV=production npm run replace-env",
+    "start:local": "nodemon src/main.ts",
+    "start": "node dist/src/main.js"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.15.2",
+    "copyfiles": "^2.4.1",
+    "nodemon": "^3.1.10",
+    "vite": "^6.3.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.7.0",
+    "couch-routes": "^1.5.9",
+    "cross-env": "^7.0.3",
+    "express": "^5.1.0",
+    "prisma": "^6.7.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3",
+    "vite-express": "*"
+  }
+}
