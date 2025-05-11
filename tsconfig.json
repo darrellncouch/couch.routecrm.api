@@ -19,5 +19,7 @@
     "outDir": "./dist"
   },
   "include": ["src", "environments/**/*"],
-  "exclude": ["environments/replace-env.ts"]
+  "exclude": [
+    "scripts/**/**"
+  ]
 }

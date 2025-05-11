@@ -3,7 +3,6 @@ import { Request, Response } from "express";
 import { UserService } from "../logic/user.service";
 import { IUserBase } from "../../core/interfaces/user/user-base.interface";
 
-
 @Controller('/user')
 export class UsersController {
 

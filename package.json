@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "replace-env": "ts-node environments/replace-env.ts",
+    "replace-env": "ts-node scripts/replace-env.ts",
     "copy-prisma": "copyfiles -u 1 prisma/**/* dist/prisma && copyfiles ./.env dist",
     "build": "tsc && npm run copy-prisma",
     "build:dev": "npm run build && cross-env NODE_ENV=development npm run replace-env",
